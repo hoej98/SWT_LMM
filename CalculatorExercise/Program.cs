@@ -8,21 +8,52 @@ namespace Calculatorr
         static void Main(string[] args)
         {
             Calculator C = new Calculator();
-            double addvalue = C.Add(10, 10);
 
-            Console.WriteLine(addvalue);
+
+            double addvalue = C.Add(10, 10);
+            Console.WriteLine("addvalue er: {0}", addvalue);
+
 
             double subvalue = C.Subtract(10, 10);
+            Console.WriteLine("subvalue er: {0}", subvalue);
 
-            Console.WriteLine(subvalue);
 
             double mulvalue = C.Multiply(10, 10);
+            Console.WriteLine("mulvalue er: {0}", mulvalue);
 
-            Console.WriteLine(mulvalue);
 
             double powvalue = C.Power(10, 10);
+            Console.WriteLine("powvalue er: {0}", powvalue);
 
-            Console.WriteLine(powvalue);
+            double divvalue = C.Divide(10, 10);
+            Console.WriteLine("divvalue er: {0}", divvalue);
+
+            Console.WriteLine("Accumulator er: {0}", C.Accumulator);
+            Console.Write("Clearing accumulator..\n");
+            C.Clear();
+            Console.WriteLine("Accumulator er: {0}", C.Accumulator);
+
+            double sqrvalue = C.sqrtOf(49);
+            Console.WriteLine("sqrvalue er: {0}", sqrvalue);
+
+            try
+            {
+                C.Divide(25, 0);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Kan ikke dividere med 0 :(");
+            }
+
+
+            try
+            {
+                C.sqrtOf(-49);
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Kan ikke tage kvadratroden af negative tal :(");
+            }
         }
     }
 
@@ -69,18 +100,30 @@ namespace Calculatorr
 
         public double Divide(double a, double b)
         {
-            double value = a / b;
-
-            Accumulator = value;
-            return value;
+            if (b == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            else
+            {
+                double value = a / b;
+                Accumulator = value;
+                return value;
+            }
         }
 
         public double sqrtOf(double a)
         {
-            double value = Math.Sqrt(a);
-
-            Accumulator = value;
-            return value;
+            if (a < 0)
+            {
+                throw new ArgumentException();
+            }
+            else
+            {
+                double value = Math.Sqrt(a);
+                Accumulator = value;
+                return value;
+            }
         }
     }
 }
