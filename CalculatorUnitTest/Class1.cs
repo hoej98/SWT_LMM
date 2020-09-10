@@ -24,7 +24,7 @@ namespace Calculatorr
         }
 
 
-        [TestCase(10, 10, 0)]
+        [TestCase(10, 10, 0)] 
         [TestCase(-5, 35, -40)]
         [TestCase(0.22, -2, 2.22)]
         public void Sub_IsCorrect(double value, double value2, double result)
