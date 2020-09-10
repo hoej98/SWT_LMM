@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftwareTest_0
+namespace Calculatorr
 {
     class Program
     {
@@ -48,6 +48,12 @@ namespace SoftwareTest_0
         public double Power(double x, double exp)
         {
             double value = Math.Pow(x, exp);
+            return value;
+        }
+
+        public double Divide(double a, double b)
+        {
+            double value = a / b;
             return value;
         }
     }

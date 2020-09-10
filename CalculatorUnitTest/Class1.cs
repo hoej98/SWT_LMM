@@ -1,8 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using SoftwareTest_0;
 
-namespace MyCalculator.test.unit
+namespace Calculatorr
 {
     [TestFixture]
     public class TestCalculator
