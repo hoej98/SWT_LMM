@@ -75,9 +75,9 @@ namespace Calculatorr
             return value;
         }
 
-        public double sqrt(double a)
+        public double sqrtOf(double a)
         {
-            double value = sqrt(a);
+            double value = Math.Sqrt(a);
 
             Accumulator = value;
             return value;
