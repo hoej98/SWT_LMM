@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalyseParams>
   <TargetExecutable>C:\Program Files\dotnet\dotnet.exe</TargetExecutable>
-  <TargetArguments>bin\Debug\netcoreapp3.1\calculatorUnitTest.dll</TargetArguments>
+  <TargetArguments>bin\Debug\netcoreapp3.1\CalculatorUnitTest.dll</TargetArguments>
   <TargetWorkingDir>CalculatorUnitTest</TargetWorkingDir>
   <TempDir><!-- Directory for the auxiliary files. Set to system temp by default. --></TempDir>
   <Output>coverage_report.html</Output>
